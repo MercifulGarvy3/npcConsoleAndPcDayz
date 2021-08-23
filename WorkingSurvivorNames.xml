@@ -1,0 +1,75 @@
+<!-- Plantilla de NPC crada por MercifulGravy3 para npc de la plataforma PC y Consolas -->
+
+<!-- cfgeventspawns.xml -->
+
+	<event name="Item+nombre"> <!-- En nombre se pone el mismo nombre que se coloco anteriormente en events.xml, debe incluir Item-->
+		<pos x="12311.3" z="12652.3" a="1" /> <!-- si agregas la "y" es el eje "y" pero no te lo recomiendo ya que debes de hacer algunos calculos para sacarla bien, x es el eje x y z el eje z, a es el angulo -1 es aleatorio, la forma va, "xyz a" -->
+    </event><!-- este codigo se pone cuantas veces este en events.xml -->
+	
+<!-- cfgspawnablestypes.xml -->
+
+	<type name="nombreDelSuperviviente"> <!-- en nombreDelSuperviviente se coloca el nombre del superviviente que pusiste en events.xml -->
+		<attachments chance="1.00"> <!-- porcentaje de aparicion -->
+			<item name="ChainSaw" chance="1.00" /> <!-- el objeto con el que va aparecer mas su porcentaje -->
+		</attachments> <!-- cuantos objetos quieras solo copia este comando desde attachments hasta /attachments y cambias el objeto -->
+	</type><!-- si quieres otro npc con otras cosas solo repites lo de arriba pero con otro nombre que hayas puesto en events.xml -->
+	
+	
+	<type name="nombreDelSuperviviente">
+		<attachments chance="1.00">
+			<item name="ChainSaw" chance="1.00" />
+		</attachments>
+	</type>
+	
+<!-- events.xml -->
+
+	<event name="Item+nombre"> <!-- mismo nombre que las cordenadas -->
+		<nominal>1</nominal> <!-- cantidad maxima hasta que lo maten y despeyejen para que vueva aparecer -->
+		<min>1</min> <!-- igual que arriba -->
+		<max>1</max> <!-- igual que arriba -->
+		<lifetime>2500</lifetime> <!-- tiempo de vida si no cumple u¿alguna condicion para que este -->
+		<restock>0</restock> <!-- no tocar -->
+		<saferadius>0</saferadius> <!-- no tocar -->
+		<distanceradius>0</distanceradius> <!-- no tocar -->
+		<cleanupradius>200</cleanupradius> <!-- no tocar -->
+		<flags deletable="0" init_random="0" remove_damaged="1"/> <!-- no tocar -->
+		<position>fixed</position> <!-- no tocar -->
+		<limit>child</limit> <!-- no tocar -->
+		<active>1</active> <!-- 1 acrivado, 0 desactivado -->
+		<children>
+			<child lootmax="2" lootmin="0" max="1" min="1" type="SurvivorM_Rolf"/> <!-- mismo nombre del superviviente que en  cfgspawnablestypes.xml y el nombre se debe de tomar de la ultima lista-->
+		</children>
+	</event> <!-- mcopiar y cambiar lo de arriba si quieres otro npc con otras cosas -->
+
+<!-- nombres diponibles de los npc, cada superviviente solo puede tener un solo tipo de loot o inventario -->
+
+SurvivorF_Eva   	
+SurvivorF_Frida 	
+SurvivorF_Gabi  	
+SurvivorF_Helga 	  
+SurvivorF_Irena  	
+SurvivorF_Judy  	 
+SurvivorF_Keiko 	
+SurvivorF_Linda  	
+SurvivorF_Maria 		
+SurvivorF_Naomi 		
+SurvivorM_Boris 	
+SurvivorM_Cyril 	
+SurvivorM_Denis 	
+SurvivorM_Elias  	 
+SurvivorM_Francis	
+SurvivorM_Guo    	
+SurvivorM_Hassan 
+SurvivorM_Indar  	
+SurvivorM_Jose   	
+SurvivorM_Kaito 	
+SurvivorM_Lewis  	
+SurvivorM_Manua  	
+SurvivorM_Mirek  	
+SurvivorM_Niki  	 
+SurvivorM_Oliver	 
+SurvivorM_Peter  	
+SurvivorM_Quinn 	
+SurvivorM_Rolf  	
+SurvivorM_Seth  	
+SurvivorM_Taiki  	
